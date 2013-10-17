@@ -6,13 +6,23 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+ </head>
 <body>
+	<div class="wrapper">
+		<%= render 'layouts/header' %>
+		<div class="masthead">
+			<div class="container">
+		 <%= yield %>
+		</div>
+		</div>
+		<section id="sales-letter">
+			<div class="container">
+				<div class="row">
+				<%= render 'layouts/row' %>	
+			</div>	
+		</section>	
 
-	<%= render 'layouts/header' %>
-	<div class="container">
-	 <%= yield %>
-	</div>
 
+	</div> <!-- /.wrapper -->	
 </body>
 </html>
