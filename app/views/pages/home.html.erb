@@ -1,9 +1,26 @@
 
+	<div class="masthead masthead-truck">
+		<div class="container">
      <h1>Food Truck Digest</h1>
      <br>
      <p class="lead">Start, Grow, and Succeed in the food truck business with the most reliable source of information in the industry</p>
+
+     <% if user_signed_in? %>
+     	# do something 
+     <% else %>	
      <div>
-	       <a class="btn btn-default btn-lg" data-toggle="modal" href="#">Login here</a>
-	       <a class="btn btn-primary btn-lg" data-toggle="modal" href="#">Sign up today!</a>
+	      <%= link_to "Login Here", new_user_session_path, class: "btn btn-default btn-lg" %>
+	    	<%= link_to "Sign Up Here", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+	    	<% end %>
      </div>
-     
+
+    </div>
+   </div> <!-- end masthead -->
+
+    <section id="sales-letter">
+			<div class="container">
+				<div class="row">
+				<%= render 'layouts/row' %>	
+				</div>
+			</div>	
+		</section>	
