@@ -10,13 +10,21 @@
 <body>
 	<div class="wrapper">
 		<%= render 'layouts/header' %>
-			
 				<% flash.each do |name, msg| %>
      		<%= content_tag(:div, msg, class: "alert alert-info") %>
 			<% end %>
 			<%= yield %>	
+		 
 
-		
-	</div> <!-- /.wrapper -->	
+         
+
+		</div> <!-- /.wrapper -->	
+	
+  <!-- FOOTER -->
+
+	<footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>© 2013 Heidi Hillenbrand, Ryan Craig and Breno Baldrati. 
+      </footer>
 </body>
 </html>

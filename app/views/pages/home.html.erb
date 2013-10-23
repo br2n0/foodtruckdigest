@@ -1,22 +1,28 @@
 
-	<div class="jumbotron masthead masthead-truck">
-     <h1>Food Truck Digest</h1>
+	<div class="jumbotron">
+     <h1>FOOD TRUCK DIGEST</h1>
      <br>
-     <p class="lead">Start, Grow, and Succeed in the food truck business with the most reliable source of information in the industry</p>
+     <p class="lead">Your full course of prime B2B information for the food truck industry</p>
+     
+         <div class="container">
+             <% if user_signed_in? %>
+             	# do something
+             <% else %>	
+                    <a class="btn btn-lg btn-outline-inverse" data-toggle="modal" href="#intro-video-modal">Play Video</a>
 
-     <% if user_signed_in? %>
-     	# do something
-     <% else %>	
-     <div class="container">
-	    	<%= link_to "Sign Up Here", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-	    	<% end %>
-     </div>
+        	    	<%= link_to "Sign Up Here", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+        	    	<% end %>
+         </div>
    </div>
+	<div class="container marketing">
+			<div class="row featurette">
+			<%= render 'layouts/row' %>	
+			</div>
+            <div class= "videomodal">
+            <%= render 'layouts/videomodal' %> 
+           <div>
 
-    <section id="sales-letter">
-			<div class="container">
-				<div class="row">
-				<%= render 'layouts/row' %>	
-				</div>
-			</div>	
-		</section>	
+   
+
+
+    
